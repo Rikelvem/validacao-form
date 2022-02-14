@@ -1,0 +1,177 @@
+:root {
+    --titulo: 'Oswald', sans-serif;
+    --sub-titulo: 'Roboto Condensed', sans-serif;
+    --corpo: 'Spline Sans', sans-serif;
+
+    --branco: #FFFFFF;
+    --branco-2: #E8E8E8;
+    --preto: #111517;
+    --cinza: #858585;
+    --metal: #0e0e0e;
+    --metal-2:#545454;
+    --vermelho: #D13328;
+    --roxo: #8a2be2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--metal);
+}
+
+/* -- Estilização modal -- */
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: var(--branco-2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 90vw;
+    height: 80vh;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 4px #5454549a;
+}
+
+.modal img {
+    width: 50%;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.modal .modal__conteudo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.modal .modal__conteudo h3 {
+    font-family: var(--titulo);
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--preto);
+    position: relative;
+    top: -20px;
+}
+
+.modal .modal__conteudo form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal .modal__conteudo form label {
+    font-family: var(--sub-titulo);
+    font-weight: 600;
+    color: var(--metal);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.modal .modal__conteudo form input {
+    text-align: center;
+    width: 75%;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #a8a7a7;
+    height: 30px;
+    color: var(--preto);
+    font-family: var(--corpo);
+}
+
+.modal .modal__conteudo form input.erro {
+    transition: .1s;
+    border: 2px solid var(--vermelho);
+}
+
+.modal .modal__conteudo form span {
+    font-size: 20px;
+    color: var(--vermelho);
+    font-weight: 700;
+    display: none;
+}
+
+.modal .modal__conteudo form span.erro {
+    display: block;
+}
+
+.modal .modal__conteudo form span.icone-1 {
+    position: absolute;
+    top: 75px;
+    right: 60px;
+}
+
+.modal .modal__conteudo form span.icone-2 {
+    position: absolute;
+    bottom: 117px;
+    right: 60px;
+}
+
+.modal .modal__conteudo form input.botao {
+    border: none;
+    background: var(--vermelho);
+    color: var(--branco);
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 30%;
+    height: 35px;
+    box-shadow: 0px 0px 15px 4px #aaaaaa80;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.modal .contato {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.modal .contato h2 {
+    font-size: 28px;
+    font-family: var(--sub-titulo);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.modal .contato a span ion-icon {
+    margin-top: 20px;
+    font-size: 40px;
+    padding: 10px 10px;
+}
+
+/* -- Responsividade -- */
+
+
+@media screen and (min-width: 768px) {
+    .modal .modal__conteudo h3 {
+        font-size: 30px;
+    }
+
+    .modal .modal__conteudo form label {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .modal {
+        width: 35%;
+    }
+
+    .modal img {
+        width: 40%;
+    }
+}
