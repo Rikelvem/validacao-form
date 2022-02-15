@@ -157,6 +157,10 @@ main {
 
 
 @media screen and (min-width: 768px) {
+    .modal {
+        width: 65%;
+    }
+
     .modal .modal__conteudo h3 {
         font-size: 30px;
     }
