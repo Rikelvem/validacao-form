@@ -11,6 +11,7 @@
     --metal-2:#545454;
     --vermelho: #D13328;
     --roxo: #8a2be2;
+    --verde: #008000;
 }
 
 * {
@@ -108,6 +109,11 @@ main {
 
 .modal .modal__conteudo form span.erro {
     display: block;
+}
+
+.modal .modal__conteudo form input.certo {
+    transition: .1s;
+    border: 2px solid var(--verde);
 }
 
 .modal .modal__conteudo form span.icone-1 {

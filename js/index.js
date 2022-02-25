@@ -9,23 +9,27 @@ botao.addEventListener('click', (event) => {
 
     if (primeiroValor.value == '') {
         primeiroValor.classList.add('erro')
+        resultado.classList.remove('certo')
         alert('Por gentileza, preencha o Valor 1')
         resultado.value = ""        
     }
     else if (parseInt(primeiroValor.value) <= 0) {
         primeiroValor.classList.add('erro')
+        resultado.classList.remove('certo')
         alert('O Valor 1 não pode ser menor ou igual a 0')
         resultado.value = ""
     }
 
     if (segundoValor.value == '') {
         segundoValor.classList.add('erro')
+        resultado.classList.remove('certo')
         alert('Por gentileza, preencha o Valor 2')
         resultado.value = ""
     }
 
     else if (parseInt(segundoValor.value) <= 0) {
         segundoValor.classList.add('erro')
+        resultado.classList.remove('certo')
         alert('O Valor 2 não pode ser menor ou igual a 0')
         resultado.value = ""
     }
@@ -42,5 +46,6 @@ botao.addEventListener('click', (event) => {
         const primeiraSoma = parseInt(primeiroValor.value)
         const segundaSoma = parseInt(segundoValor.value)
         resultado.value = primeiraSoma+segundaSoma
+        resultado.classList.add('certo')
     }
 })
